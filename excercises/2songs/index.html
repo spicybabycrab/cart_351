@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Le 2 Songs</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<audio autoplay loop id="audio"><source src="sounds/denglijun.mp3">
+</audio>
+
+<section id="songs">
+
+<figure onClick="open1()"><img src="images/denglijun.jpg" alt="denglijun">
+</figure>
+
+
+<div id="song1" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close" onClick="close1()">&times;</span>
+      <h2>Deng Li Jun</h2>
+    </div>
+    <div class="modal-body">
+      <p>When we immigrated to Canada, we lived in a tiny basement suite in NE Calgary. My parents always played deng li-jun’s “yue liang dai biao wo de xin” (the moon represents my heart) on the cassette. Deng li-jun was a Taiwanese singer and a cultural icon (because she bridged Taiwan, Hong Kong and other Chinese speaking countries through popular culture), and my parents listened to her a lot in the 80s and 90s. I don’t listen to her now but it kind of brings back immigration cassette-tape childhood nostalgia.</p>
+      <a href="https://www.youtube.com/watch?v=bv_cEeDlop0">Link to Song</a>
+    </div>
+  </div>
+</div>
+
+
+<figure onClick="open2()"><img src="images/sesoneon.jpg" alt="sesoneon"></figure>
+
+ <div id="song2" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close" onClick="close2()">&times;</span>
+      <h2>Se So Neon</h2>
+    </div>
+    <div class="modal-body">
+      <p>I’ve been having many in-between stages in the past few years and in the summer of 2018 I was living in Vancouver, in-between my time in Montreal and Japan, in-between changing my name and gender pronouns to Le - he/they, and in-between many places physically and mentally. I feel like with music I tend to listen to the same song or the same band/artist on repeat for weeks until I get tired of it. And during this time I was listening to se so neon, a Korean indie rock band. Se so neon’s lead singer hwang so-yoon has the most mesmerizing voice and guitar solos, and the song “a long dream” filled that summer.</p>
+      <a href="https://www.youtube.com/watch?v=tzL4A8hyXc8">Link to Song</a>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+var song1 = document.getElementById("song1");
+function open1() {
+  song1.style.display = "block";
+}
+function close1() {
+  song1.style.display = "none";
+}
+
+
+var song2 = document.getElementById("song2");
+function open2(){
+ song2.style.display = "block";
+}
+function close2() {
+  song2.style.display = "none";
+}
+
+</script>
+
+</html>
