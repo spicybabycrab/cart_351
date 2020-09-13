@@ -23,15 +23,18 @@ a:hover {
   transition: 0.1s;
 }
 
+/* ---NAV--- */
 nav {
-  position:absolute;
+  position:fixed;
   right:0;
   top:2vmax;
+  z-index: 10;
 }
 
 nav ul {
   list-style-type: none;
   text-align: right;
+  font-size: 1.3em;
   padding: 2em;
 }
 
@@ -39,29 +42,34 @@ nav li {
   padding-bottom: 0.2em;
 }
 
+/* ---MARQUEE--- */
 #topmarquee {
   position:fixed;
+  font-size: 1.5em;
   top:0;
   color:white;
   overflow: hidden;
-  border-bottom:3px solid white;
-  background-color: black;
-  z-index: 2;
+  border-bottom:2px solid white;
+  background-color: #333;
+  z-index: 10;
 }
 
 #bottommarquee {
-  visibility: hidden;
   position:fixed;
+  font-size: 1.5em;
   bottom:0;
   color:white;
   overflow: hidden;
-  border-top:3px solid white;
-  background-color: black;
-  z-index: 2;
+  border-top:2px solid white;
+  background-color: #333;
+  z-index: 10;
 }
 
-#hewwo {
+/* ---ABOUT--- */
+.hero {
   font-family: 'vtf_gulaxregular';
+  font-size: 4vmax;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,15 +77,203 @@ nav li {
   flex-flow: column;
 }
 
-#hewwo h3 {
-  font-family: 'fengardo_neueregular';
+.hero h1 {
+  z-index: 2;
 }
 
-@media only screen and (min-width:1024px){
+.hero h3 {
+  font-family:'fengardo_neueregular';
+  z-index: 2;
+}
 
-#bottommarquee {
-visibility: visible;
-  }
+.boi {
+  width: 5em;
+  padding-bottom: 1em;
+  margin-left: 4em;
+  z-index: 2;
+}
+
+.face {
+  position:absolute;
+  width: 30vh;
+  padding-top: 3em;
+}
+
+/* ---INTRO--- */
+.wrapper {
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: 0 auto;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col {
+  color: white;
+  width: 100%;
+  display: inline-block;
+  padding-bottom: 1em;
+}
+
+/* ---EXCERCISES--- */
+#excercises {
+  font-family: 'vtf_gulaxregular';
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  text-align: center;
+  margin-bottom: 5em;
+  border: none;
+  padding: 3em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#excercises div {
+    display:grid;
+    margin:4%;
+    border:none;
+}
+
+#excercises h1{
+    color:white;
+}
+
+#excercises h1:hover{
+  color:blue;
+}
+
+/* ---PROJECTS--- */
+#projects {
+  font-family: 'vtf_gulaxregular';
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  text-align: center;
+  margin-bottom: 5em;
+  background-color: white;
+  border: none;
+  padding: 3em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#projects div {
+    display:grid;
+    margin:4%;
+    border:none;
+}
+
+#projects h1{
+    color:#333;
+}
+
+#projects h1:hover{
+  color:blue;
+}
+
+/* ---REFLECTIONS--- */
+#reflections {
+  font-family: 'vtf_gulaxregular';
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  text-align: center;
+  margin-bottom: 5em;
+  border: none;
+  padding: 3em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#reflections div {
+    display:grid;
+    margin:4%;
+    border:none;
+}
+
+#reflections h1{
+    color:white;
+}
+
+#reflections h1:hover{
+  color:blue;
+}
+
+/* ---PRESENTATIONS--- */
+#presentations {
+  font-family: 'vtf_gulaxregular';
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  text-align: center;
+  margin-bottom: 5em;
+  background-color: white;
+  border: none;
+  padding: 3em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#presentations div {
+    display:grid;
+    margin:4%;
+    border:none;
+}
+
+#presentations h1{
+    color:#333;
+}
+
+#presentations h1:hover{
+  color:blue;
+}
+
+/* ---FOOTER--- */
+.wow {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3em;
+  margin-bottom: 10em;
+}
+
+.ovalbutton {
+    color: #fff;
+    font-family:'fengardo_neueregular';
+    font-size: 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    padding: 50px 100px;
+    -webkit-transition: .2s;
+    transition: .2s;
+    margin-top: 100px;
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+.ovalbutton:hover{
+    color: #333;
+    background-color: blue;
+    font-family:'fengardo_neueregular';
+    font-size: 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid blue;
+    border-radius: 100%;
+    padding: 50px 100px;
+    -webkit-transition: .2s;
+    transition: .2s;
+    margin-top: 100px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
 
 
 
@@ -88,17 +284,21 @@ visibility: visible;
 
 
 
+/* ---MEDIA QUERIES--- */
+@media only screen and (min-width:768px){
 
+.intro{
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
 
+.wrapper {
+  display:flex;
+}
 
-
-
-
-
-
-
-
-
+.col {
+  width: 48%;
+}
 
 
 
