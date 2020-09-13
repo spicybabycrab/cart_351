@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Sans+Pro&display=swap');
+
+/* reset */
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* border and padding won't increase width or height*/
+}
+
+meta {
+    display: none;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    background-color: #e65c00;
+    color: #fff;
+    height:100%;
+    transition: all .5s;
+    width: 100%;
+}
+
+body{
+    position:relative;
+    width: 100%;
+    padding:0;
+    margin:0;
+}
+/*
+section {
+    width: 100%;
+    height: 100vh;
+	padding: 2%;
+	position:relative;
+}
+
+h2{
+  text-align: center;
+}
+h3{
+  text-align: center;
+} */
+
+#songs {
+	padding: 9vmax;
+	display: grid;
+	grid-gap: 40px;
+/*	grid-template-columns: repeat(5, 1fr);*/
+/*	grid-template-columns: repeat( 5, minmax(250px, 1fr) );*/
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-bottom: 0px;
+}
+
+figure {
+  border:solid 2px #ffff00;
+  border-radius: 10%;
+}
+img {
+	display: block;
+	width: 100%;
+  height: 100%;
+  border-radius: 10%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color:white;
+  margin: auto;
+  padding: 0;
+  border: 2px solid #ffff00;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {bottom:-300px; opacity:0}
+  to {bottom:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {bottom:-300px; opacity:0}
+  to {bottom:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: #e65c00;
+  float: right;
+  font-size: 3vmax;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #ffff00;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+padding: 3% 3%;
+font-family: 'Press Start 2P', cursive;
+color: #e65c00;
+}
+
+.modal-body {
+padding: 3% 3%;
+font-size: 12px;
+font-family: 'Source Sans Pro', sans-serif;
+color: #e65c00;
+}
