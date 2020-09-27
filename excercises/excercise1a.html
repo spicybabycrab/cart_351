@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> EXERCISE 1A </title>
+  <meta charset="UTF-8">
+
+  <style>
+  #c {
+      background-color: #3e181b;
+      border: 3px solid #db1d2d;}
+
+  #d {
+      background-color: #422018;
+      border: 3px solid #f0421c;}
+
+  #e {
+      background-color: #45391b;
+      border: 3px solid #fec02d;}
+
+  body{
+        background:black;
+      }
+
+  .para {color:white;font-size:22pt; background:purple;margin-left: 1%;margin-top: 1%; padding:1%;}
+
+  .box {
+      width: 10vw; /*(1/10th) viewport width */
+      height: 10vw;
+      margin-left: 1%;
+      margin-top: 1%;
+      display:inline-block;
+    }
+  .wrapper{
+    margin-left:30%;
+    margin-top:15%;
+  }
+  </style>
+
+
+  <script>
+  window.onload = function(){
+
+  let cBox = document.getElementById('c');
+    cBox.addEventListener('click', handleClick);
+    cBox.addEventListener('mouseover', handlemouseOver);
+    cBox.addEventListener('mouseout', handlemouseOut);
+
+  let dBox = document.getElementById('d');
+    dBox.addEventListener('click', handleClick);
+    dBox.addEventListener('mouseover', handlemouseOver);
+    dBox.addEventListener('mouseout', handlemouseOut);
+
+  let eBox = document.getElementById('e');
+    eBox.addEventListener('click', handleClick);
+    eBox.addEventListener('mouseover', handlemouseOver);
+    eBox.addEventListener('mouseout', handlemouseOut);
+
+  let closeParagraph = document.getElementById("displayText");
+  closeParagraph.addEventListener('click', handleClick);
+
+
+  function handleClick() {
+
+        let paragraph = document.getElementById("displayText");
+        let boxID = event.target.id;
+
+        console.log(boxID);
+
+
+        if (boxID === "displayText"){
+          paragraph.style.display = "none";
+        } else {
+          paragraph.innerHTML = "This is text for box " + boxID;
+          paragraph.style.display = "inline-block";
+        };
+
+}
+
+function handlemouseOver() {
+  let boxID = event.target.id;
+  document.getElementById(boxID).style.opacity = "0.5";
+};
+
+
+function handlemouseOut() {
+  let boxID = event.target.id;
+  document.getElementById(boxID).style.opacity = "1";
+};
+
+    //
+    // let handlemouseOver = function (){
+    //     document.getElementById('displayText').style.opacity = "0.5";
+    //   };
+    //
+    //
+    // let handlemouseOut = function (event){
+    //       document.getElementById('displayText').style.opacity = "1";
+    //     };
+    //
+    //
+    // let ChangeOpacity = document.getElementById('displayText');
+    //     ChangeOpacity.addEventListener('mouseover', handlemouseOver);
+    //     ChangeOpacity.addEventListener('mouseout', handlemouseOut);
+    // }
+    //
+
+
+  }
+
+
+  </script>
+</head>
+
+
+<body>
+  <div class = "wrapper">
+  <div id = "c" class = "box"><p></p></div>
+  <div id = "d" class = "box"><p></p></div>
+  <div id = "e" class = "box"><p></p></div>
+  <br />
+  <p style = "display:none;" id = "displayText" class = "para"></p>
+</div>
+
+</body>
+</html>
